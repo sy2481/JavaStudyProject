@@ -1,11 +1,12 @@
 package com.sunzhouyu.design.Builder;
 
 public interface AirShipDirector {
-	
-	/**
-	 * 组装飞船对象
-	 * @return
-	 */
-	AirShip   directAirShip();
-	
+
+    /**
+     * 组装飞船对象
+     *
+     * @return
+     */
+    AirShip directAirShip();
+
 }
