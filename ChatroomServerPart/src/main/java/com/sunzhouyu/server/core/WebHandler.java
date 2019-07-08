@@ -14,17 +14,11 @@ import org.xml.sax.helpers.DefaultHandler;
  */
 public class WebHandler extends DefaultHandler {
     private List<Entity> entitys = new ArrayList<Entity>();
-
     private List<Mapping> mappings = new ArrayList<Mapping>();
-
     private Entity entity;
-
     private Mapping mapping;
-
     private String tag; //存储操作标签
-
     private boolean isMapping = false;
-
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         if (null != qName) {
