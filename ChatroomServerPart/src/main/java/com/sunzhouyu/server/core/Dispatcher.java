@@ -32,12 +32,10 @@ public class Dispatcher implements Runnable {
     @SuppressWarnings("")
 
     public void run() {
-
         try {
             byte[] bytes = new byte[1024 * 1024 * 10];
             if (null == request.getUrl() || request.getUrl().equals("")) {
                 InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("index.html");
-
                 int length = is.read(bytes);
                 response.print(new String(bytes, 0, length));
                 //response.print(new String(is.readAllBytes()));
