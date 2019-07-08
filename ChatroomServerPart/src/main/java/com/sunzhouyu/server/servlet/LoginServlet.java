@@ -4,15 +4,13 @@ package com.sunzhouyu.server.servlet;
  * @author sunyi
  * @create 2018/12/26
  */
-public class LoginServlet implements  Servlet{
+public class LoginServlet implements Servlet {
 
     public void service() {
         System.out.println("login");
     }
 
-
-
-    public void  service(Request request,Response response) {
+    public void service(Request request, Response response) {
         response.print("<html>");
         response.print("<head>");
         response.print("<title>");
@@ -20,7 +18,7 @@ public class LoginServlet implements  Servlet{
         response.print("</title>");
         response.print("</head>");
         response.print("<body>");
-        response.print("欢迎回来:"+request.getParameter("uname"));
+        response.print("欢迎回来:" + request.getParameter("uname"));
         response.print("</body>");
         response.print("</html>");
     }

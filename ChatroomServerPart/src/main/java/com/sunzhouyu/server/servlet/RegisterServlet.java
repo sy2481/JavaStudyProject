@@ -10,8 +10,7 @@ public class RegisterServlet implements Servlet {
         System.out.println("register");
     }
 
-
-    public void  service(Request request,Response response) {
+    public void service(Request request, Response response) {
 
     }
 }
