@@ -42,7 +42,7 @@ public class Server {
 //
 //            System.out.println(new String(bytes, 0, a));
 
-            StringBuilder content =new StringBuilder();
+            StringBuilder content = new StringBuilder();
             content.append("<html>");
             content.append("<head>");
             content.append("<title>");
@@ -54,8 +54,8 @@ public class Server {
             content.append("</body>");
             content.append("</html>");
             int size = content.toString().getBytes().length; //必须获取字节长度
-            StringBuilder responseInfo =new StringBuilder();
-            String blank =" ";
+            StringBuilder responseInfo = new StringBuilder();
+            String blank = " ";
             String CRLF = "\r\n";
             //返回
             //1、响应行: HTTP/1.1 200 OK
@@ -63,7 +63,7 @@ public class Server {
             responseInfo.append(200).append(blank);
             responseInfo.append("OK").append(CRLF);
             //2、响应头(最后一行存在空行):
-			/*
+            /*
 			 Date:Mon,31Dec209904:25:57GMT
 			Server:shsxt Server/0.0.1;charset=GBK
 			Content-type:text/html
@@ -78,10 +78,9 @@ public class Server {
             responseInfo.append(content.toString());
 
             //写出到客户端
-            BufferedWriter bw =new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
             bw.write(responseInfo.toString());
             bw.flush();
-
 
         } catch (Exception e) {
         }
