@@ -16,7 +16,6 @@ class StaticVar {
     public static final String FIANL_VALUE = "fianl value loading";
 }
 
-
 public class StaticClassLoadTest {
     public static void main(String[] args) {
         System.out.println("StaticClassLoadTest...");

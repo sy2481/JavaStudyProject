@@ -9,7 +9,6 @@ public class Demo05 {
         ClassLoader loader = Demo05.class.getClassLoader();
         System.out.println(loader);
 
-
         ClassLoader loader2 = Thread.currentThread().getContextClassLoader();
         System.out.println(loader2);
 
@@ -20,14 +19,13 @@ public class Demo05 {
         System.out.println(c);
         System.out.println(c.getClassLoader());
 
-        Class d1 =Class.forName("com.sunzhouyu.classloader.Demo");
+        Class d1 = Class.forName("com.sunzhouyu.classloader.Demo");
 
         Class<Demo> d = (Class<Demo>) Thread.currentThread().getContextClassLoader().loadClass("com.sunzhouyu.classloader.Demo");
         System.out.println(d);
-        Demo de=d.newInstance();
+        Demo de = d.newInstance();
         de.print();
         System.out.println(d.getClassLoader());
-
 
     }
 }

@@ -9,7 +9,8 @@ public class Demo extends Object {
         AA a = new AA();
         System.out.println(AA.length);
     }
-    public void print(){
+
+    public void print() {
         System.out.println(111);
     }
 
